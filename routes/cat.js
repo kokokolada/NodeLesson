@@ -59,16 +59,5 @@ module.exports = {
             res.redirect('/');
         });
     },
-    deleteCat: (req, res) => {
-        let catID = req.params.id;
-        let deleteUserQuery = 'DELETE FROM cats WHERE cat_id = "' + catID + '"';
-
-        db.query(deleteUserQuery, (err, result) => {
-            if (err) {
-                return res.status(500).send(err);
-            }
-                    res.redirect('/');
-                });
-        
-    }
+    //Siia tuleb Delete cat query
 };
